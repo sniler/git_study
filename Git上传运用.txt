@@ -1,0 +1,23 @@
+
+$ git clone https://zsxaa@bitbucket.org/zsxaa/test.git 
+
+$ git status
+
+$ cd test/
+
+
+$ ls
+
+$ git status
+
+$ git add .
+
+$ git status
+
+$ git commit -m "INTI"
+
+$ git status
+
+$ git push origin master
+
+$
