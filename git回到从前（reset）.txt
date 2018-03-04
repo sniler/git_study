@@ -1,0 +1,13 @@
+整个项目（reset）的回退
+git log --oneline //查看历史
+git add 2.py 
+git commit --amend --no-edit //不改变某个历史 回到某个历史
+git reset 1.py 
+git reset --hard HEAD
+git status -s 
+git reset --hard 版本号 
+git reflog //查看每一步的历史操作
+
+单个文件的回退（checkout），其他文件不影响
+git log --oneline
+git checkout c6762a1 -- 1.py   //git checkout 版本号 -- 文件名 
