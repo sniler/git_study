@@ -86,3 +86,24 @@ git grep -e '#define' --and -e SORT_DIRENT
 git gc
 git fsck
 # 添加：添加文件到当前工作空间中。如果你不使用 git add 将文件添加进去，那么这些文件也不会添加到之后的提交之中
+# 添加一个文件
+$ git add test.js
+
+# 添加一个子目录中的文件
+$ git add /path/to/file/test.js
+
+# 支持正则表达式
+$ git add ./*.js
+
+# 添加指定文件到暂存区
+$ git add [file1] [file2] ...
+
+# 添加指定目录到暂存区，包括子目录
+$ git add [dir]
+
+# 添加当前目录的所有文件到暂存区
+$ git add .
+
+# 添加每个变化前，都会要求确认
+# 对于同一个文件的多处变化，可以实现分次提交
+$ git add -p
