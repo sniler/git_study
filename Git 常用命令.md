@@ -62,8 +62,8 @@ git diff --cached
 ### 比较与上一个版本的差异
 git diff HEAD^                                            
 ### 比较与HEAD版本lib目录的差异
-`git diff HEAD -- ./lib`                      
->>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的  
+`git diff HEAD -- ./lib       `              
+`>>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的  `
 >>git diff origin/master..master --stat                     # 只显示差异的文件，不显示具体内容  
 >>git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）  
 >>git branch                                                # 显示本地分支  
@@ -113,7 +113,7 @@ git diff HEAD^
 >>git grep "delete from"                                    # 文件中搜索文本“delete from”  
 >>git grep -e '#define' --and -e SORT_DIRENT  
 >>git gc  
->>git fsck  
+>>git fsck  `
 # 添加：添加文件到当前工作空间中。如果你不使用 git add 将文件添加进去，那么这些文件也不会添加到之后的提交之中
 ### 添加一个文件
 $ git add test.js
