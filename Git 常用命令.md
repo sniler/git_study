@@ -1,39 +1,68 @@
 # Git常用命令
-git init                                                  # 初始化本地git仓库（创建新仓库）
-git config --global user.name "xxx"                       # 配置用户名
-git config --global user.email "xxx@xxx.com"              # 配置邮件
-git config --global color.ui true                         # git status等命令自动着色
+### 初始化本地git仓库（创建新仓库）
+git init        
+### 配置用户名                                          
+git config --global user.name "xxx"                       
+### 配置邮件
+git config --global user.email "xxx@xxx.com"              
+### git status等命令自动着色
+git config --global color.ui true                         
 git config --global color.status auto
 git config --global color.diff auto
 git config --global color.branch auto
 git config --global color.interactive auto
-git config --global --unset http.proxy                    # remove  proxy configuration on git
-git clone git+ssh://git@192.168.53.168/VT.git             # clone远程仓库
-git status                                                # 查看当前版本状态（是否修改）
-git add xyz                                               # 添加xyz文件至index
-git add .                                                 # 增加当前子目录下所有更改过的文件至index
-git commit -m 'xxx'                                       # 提交
-git commit --amend -m 'xxx'                               # 合并上一次提交（用于反复修改）
-git commit -am 'xxx'                                      # 将add和commit合为一步
-git rm xxx                                                # 删除index中的文件
-git rm -r *                                               # 递归删除
-git log                                                   # 显示提交日志
-git log -1                                                # 显示1行日志 -n为n行
+### remove  proxy configuration on git
+git config --global --unset http.proxy                    
+### clone远程仓库
+git clone git+ssh://git@192.168.53.168/VT.git             
+### 查看当前版本状态（是否修改）
+git status                                                
+### 添加xyz文件至index
+git add xyz                                               
+### 增加当前子目录下所有更改过的文件至index
+git add .                                                 
+### 提交
+git commit -m 'xxx'                                       
+### 合并上一次提交（用于反复修改）
+git commit --amend -m 'xxx'                               
+### 将add和commit合为一步
+git commit -am 'xxx'                                      
+### 删除index中的文件
+git rm xxx                                               
+### 递归删除
+git rm -r *                                               
+### 显示提交日志
+git log                                                   
+### 显示1行日志 -n为n行
+git log -1                                                
 git log -5
-git log --stat                                            # 显示提交日志及相关变动文件
+### 显示提交日志及相关变动文件
+git log --stat                                            
 git log -p -m
-git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容
-git show dfb02                                            # 可只用commitid的前几位
-git show HEAD                                             # 显示HEAD提交日志
-git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本
-git tag                                                   # 显示已存在的tag
-git tag -a v2.0 -m 'xxx'                                  # 增加v2.0的tag
-git show v2.0                                             # 显示v2.0的日志及详细内容
-git log v2.0                                              # 显示v2.0的日志
-git diff                                                  # 显示所有未添加至index的变更
-git diff --cached                                         # 显示所有已添加index但还未commit的变更
-git diff HEAD^                                            # 比较与上一个版本的差异
-git diff HEAD -- ./lib                                    # 比较与HEAD版本lib目录的差异
+### 显示某个提交的详细内容
+git show dfb02e6e4f2f7b573337763e5c0013802e392818         
+### 可只用commitid的前几位
+git show dfb02                                            
+### 显示HEAD提交日志
+git show HEAD                                             
+### 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本
+git show HEAD^   
+### 显示已存在的tag                                         
+git tag                                                   
+### 增加v2.0的tag
+git tag -a v2.0 -m 'xxx'                                  
+### 显示v2.0的日志及详细内容
+git show v2.0                                             
+### 显示v2.0的日志
+git log v2.0                                              
+### 显示所有未添加至index的变更
+git diff                                                  
+### 显示所有已添加index但还未commit的变更
+git diff --cached                                         
+### 比较与上一个版本的差异
+git diff HEAD^                                            
+### 比较与HEAD版本lib目录的差异
+git diff HEAD -- ./lib                                    
 git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的
 git diff origin/master..master --stat                     # 只显示差异的文件，不显示具体内容
 git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）
