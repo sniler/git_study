@@ -62,7 +62,7 @@ git diff --cached
 ### 比较与上一个版本的差异
 git diff HEAD^                                            
 ### 比较与HEAD版本lib目录的差异
->>git diff HEAD -- ./lib                                    
+`git diff HEAD -- ./lib`                      
 >>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的  
 >>git diff origin/master..master --stat                     # 只显示差异的文件，不显示具体内容  
 >>git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）  
