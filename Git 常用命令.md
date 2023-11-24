@@ -114,6 +114,10 @@ git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义�
 >>git grep -e '#define' --and -e SORT_DIRENT  
 >>git gc  
 >>git fsck  `
+# 无法 clone Cloning into 'yolov5'... fatal: unable to access 'https://github.com/ultralytics/yolov5/': Send failure: Connection was reset`
+`Cloning into 'pylearn2'... fatal: unable to access 'https://github.com/sniler/pylearn2.git/': schannel: failed to receive handshake, SSL/TLS connection failed
+git config --global http.sslBackend "openssl"`
+
 # 添加：添加文件到当前工作空间中。如果你不使用 git add 将文件添加进去，那么这些文件也不会添加到之后的提交之中
 ### 添加一个文件
 $ git add test.js
