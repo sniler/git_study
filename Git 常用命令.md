@@ -140,3 +140,8 @@ $ git add .
 ### 添加每个变化前，都会要求确认
 ### 对于同一个文件的多处变化，可以实现分次提交
 $ git add -p
+# 查看版本号：cp39对应python3.9 32位还是64位，有的需要加字符，使用以下命令
+>>python -m pip debug --verbose
+
+# numpy 科学技术相关下载源
+>>https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
