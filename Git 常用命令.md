@@ -62,18 +62,31 @@ git diff --cached
 ### 比较与上一个版本的差异
 git diff HEAD^                                            
 ### 比较与HEAD版本lib目录的差异
-`git diff HEAD -- ./lib  `                  
-`git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的  `
-git diff origin/master..master --stat                     # 只显示差异的文件，不显示具体内容  
-git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）
->>git branch                                                # 显示本地分支  
->>git branch --contains 50089                               # 显示包含提交50089的分支  
->>git branch -a                                             # 显示所有分支  
->>git branch -r                                             # 显示所有原创分支  
->>git branch --merged                                       # 显示所有已合并到当前分支的分支  
->>git branch --no-merged                                    # 显示所有未合并到当前分支的分支  
->>git branch -m master master_copy                          # 本地分支改名  
->>git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出  
+`git diff HEAD -- ./lib  `     
+### 比较远程分支master上有本地分支master上没有的               
+git diff origin/master..master
+### 只显示差异的文件，不显示具体内容 
+git diff origin/master..master --stat
+### 增加远程定义（用于push/pull/fetch）
+git remote add origin git+ssh://git@192.168.53.168/VT.git 
+### 显示本地分支
+git branch
+### 显示包含提交50089的分支
+```python {cmd="/usr/local/bin/python3"}
+git branch --contains 50089
+```
+### 显示所有分支                                
+```git branch -a``` 
+### 显示所有原创分支                                                
+>>git branch -r                                             
+### 显示所有已合并到当前分支的分支
+>>git branch --merged                                       
+### 显示所有未合并到当前分支的分支  
+>>git branch --no-merged                                      
+### 本地分支改名 
+>>git branch -m master master_copy                          
+### 从当前分支创建新分支master_copy并检出 
+>>git checkout -b master_copy                                 
 >>git checkout -b master master_copy                        # 上面的完整版  
 >>git checkout features/performance                         # 检出已存在的features/performance分支  
 >>git checkout --track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支  
