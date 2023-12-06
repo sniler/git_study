@@ -32,38 +32,38 @@ git rm xxx
 ### 递归删除
 git rm -r *                                               
 ### 显示提交日志
-git log                                                   
+git log
 ### 显示1行日志 -n为n行
-git log -1                                                
+git log -1
 git log -5
 ### 显示提交日志及相关变动文件
-git log --stat                                            
+git log --stat
 git log -p -m
 ### 显示某个提交的详细内容
-git show dfb02e6e4f2f7b573337763e5c0013802e392818         
+git show dfb02e6e4f2f7b573337763e5c0013802e392818
 ### 可只用commitid的前几位
-git show dfb02                                            
+git show dfb02
 ### 显示HEAD提交日志
-git show HEAD                                             
+git show HEAD
 ### 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本
-git show HEAD^   
-### 显示已存在的tag                                         
-git tag                                                   
+git show HEAD
+### 显示已存在的tag
+git tag
 ### 增加v2.0的tag
-git tag -a v2.0 -m 'xxx'                                  
+git tag -a v2.0 -m 'xxx'
 ### 显示v2.0的日志及详细内容
-git show v2.0                                             
+git show v2.0
 ### 显示v2.0的日志
-git log v2.0                                              
+git log v2.0
 ### 显示所有未添加至index的变更
-git diff                                                  
+git diff
 ### 显示所有已添加index但还未commit的变更
-git diff --cached                                         
+git diff --cached
 ### 比较与上一个版本的差异
-git diff HEAD^                                            
+git diff HEAD
 ### 比较与HEAD版本lib目录的差异
-`git diff HEAD -- ./lib  `     
-### 比较远程分支master上有本地分支master上没有的               
+`git diff HEAD -- ./lib`
+### 比较远程分支master上有本地分支master上没有的
 git diff origin/master..master
 ### 只显示差异的文件，不显示具体内容 
 git diff origin/master..master --stat
@@ -75,10 +75,9 @@ git branch
 ```python {cmd="/usr/local/bin/python3"}
 git branch --contains 50089
 ```
-### 显示所有分支                                
-```git branch -a``` 
-### 显示所有原创分支                                                
->>git branch -r                                             
+### 显示所有分支
+```git branch -a```
+### 显示所有原创分支
 ### 显示所有已合并到当前分支的分支
 >>git branch --merged                                       
 ### 显示所有未合并到当前分支的分支  
