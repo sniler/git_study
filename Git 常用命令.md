@@ -126,6 +126,10 @@ git branch --contains 50089
 >>git grep -e '#define' --and -e SORT_DIRENT  
 >>git gc  
 >>git fsck  `
+# 无法 clone Cloning into 'yolov5'... fatal: unable to access 'https://github.com/ultralytics/yolov5/': Send failure: Connection was reset`
+`Cloning into 'pylearn2'... fatal: unable to access 'https://github.com/sniler/pylearn2.git/': schannel: failed to receive handshake, SSL/TLS connection failed
+git config --global http.sslBackend "openssl"`
+
 # 添加：添加文件到当前工作空间中。如果你不使用 git add 将文件添加进去，那么这些文件也不会添加到之后的提交之中
 ### 添加一个文件
 $ git add test.js
@@ -148,3 +152,8 @@ $ git add .
 ### 添加每个变化前，都会要求确认
 ### 对于同一个文件的多处变化，可以实现分次提交
 $ git add -p
+# 查看版本号：cp39对应python3.9 32位还是64位，有的需要加字符，使用以下命令
+>>python -m pip debug --verbose
+
+# numpy 科学技术相关下载源
+>>https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
