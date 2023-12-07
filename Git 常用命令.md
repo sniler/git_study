@@ -145,3 +145,15 @@ $ git add -p
 
 # numpy 科学技术相关下载源
 >>https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+
+### 提取时间
+```
+git log -1 --pretty=format:"%ad" --date=format:"%Y-%m-%d %H:%M:%S" <commit_id>
+
+```
+### 提取时间，commitId，作者
+提取多个信息去掉-1
+```
+git log -1 --pretty=format:"Date: %ad%nCommitID: %H%nAuthor: %an <%ae>"
+
+```
