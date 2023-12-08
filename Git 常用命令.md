@@ -161,19 +161,4 @@ python -m pip debug --verbose
 ```
 
 # numpy 科学技术相关下载源
-https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
-
-## 快速解决冲突
-1.安装beyond compare
-2.在git中配置
-```
-git config --local merge.tool bc3
-git config --local mergetool.patch '/uer/local/bin/bcomp'
-git config --local mergetool.keepBackup false
-```
-3.应用beyond compare解决冲突
-```
-git mergetool
-```
-### 测试代码
-```git checkout -b release```
+>>https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
