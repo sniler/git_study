@@ -1,36 +1,36 @@
 # Git常用命令
 ### 初始化本地git仓库（创建新仓库）
-git init        
-### 配置用户名                                          
-git config --global user.name "xxx"                       
+git init
+### 配置用户名
+git config --global user.name "xxx"
 ### 配置邮件
-git config --global user.email "xxx@xxx.com"              
+git config --global user.email "xxx@xxx.com"
 ### git status等命令自动着色
-git config --global color.ui true                         
+git config --global color.ui true
 git config --global color.status auto
 git config --global color.diff auto
 git config --global color.branch auto
 git config --global color.interactive auto
 ### remove  proxy configuration on git
-git config --global --unset http.proxy                    
+git config --global --unset http.proxy
 ### clone远程仓库
-git clone git+ssh://git@192.168.53.168/VT.git             
+git clone git+ssh://git@192.168.53.168/VT.git
 ### 查看当前版本状态（是否修改）
-git status                                                
+git status
 ### 添加xyz文件至index
-git add xyz                                               
+git add xyz
 ### 增加当前子目录下所有更改过的文件至index
-git add .                                                 
+git add .
 ### 提交
-git commit -m 'xxx'                                       
+git commit -m 'xxx'
 ### 合并上一次提交（用于反复修改）
-git commit --amend -m 'xxx'                               
+git commit --amend -m 'xxx'
 ### 将add和commit合为一步
-git commit -am 'xxx'                                      
+git commit -am 'xxx'
 ### 删除index中的文件
-git rm xxx                                               
+git rm xxx
 ### 递归删除
-git rm -r *                                               
+git rm -r *
 ### 显示提交日志
 git log
 ### 显示1行日志 -n为n行
@@ -53,6 +53,9 @@ git tag
 git tag -a v2.0 -m 'xxx'
 ### 显示v2.0的日志及详细内容
 git show v2.0
+### tag 版本号，提交本地版本号v1.0
+git push origin --tags
+
 ### 显示v2.0的日志
 git log v2.0
 ### 显示所有未添加至index的变更
@@ -153,7 +156,24 @@ $ git add .
 ### 对于同一个文件的多处变化，可以实现分次提交
 $ git add -p
 # 查看版本号：cp39对应python3.9 32位还是64位，有的需要加字符，使用以下命令
->>python -m pip debug --verbose
+```
+python -m pip debug --verbose
+```
 
 # numpy 科学技术相关下载源
->>https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+
+## 快速解决冲突
+1.安装beyond compare
+2.在git中配置
+```
+git config --local merge.tool bc3
+git config --local mergetool.patch '/uer/local/bin/bcomp'
+git config --local mergetool.keepBackup false
+```
+3.应用beyond compare解决冲突
+```
+git mergetool
+```
+### 测试代码
+```git checkout -b release```
